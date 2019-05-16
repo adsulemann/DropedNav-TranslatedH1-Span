@@ -1,266 +1,237 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    background-color:rgb(104, 195, 18) ;
-    margin: 0;
+body {
+  padding: 0px;
+  margin: 0px;
 }
+
 
 /* Header's Background Image */
 .header {
-  background-image:
-   linear-gradient(to right bottom, rgba(74, 243, 150, 0.8),rgba(40,180,133,0.8)),
-  url(hero.jpg)  ;
-  height: 95vh; 
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(146, 209, 174, 0.479),
+      rgba(153, 212, 193, 0.424)
+    ),
+    url(hero.jpg);
+  height: 95vh;
 }
 
-/* -------------------------------------------- */
+.logo{
+  float: right;
+  position: relative;
+  top: 15px;
+  right: 15px;
+}
 
+
+/* -------------------------------------------- */
 
 /* Droped Button (Nav) */
 
 .button {
   position: relative;
-  top: 20PX;
-  left: 10PX;
-  background-color:white;
-  color:  #3e8e41;
+  top: 20px;
+  left: 10px;
+  background-color: white;
+  color: #3e8e41;
   padding: 10px;
   font-size: 18px;
   border: none;
   border-radius: 45px;
-  
-  }
-
-.dropdown{
-position: relative;
-display: inline-block; 
-
 }
 
-.dropdownelements{
-    display: none;
-    position: absolute;
-    top: 62PX;
-    left: 12PX;
-    background-color: orange;
-    border-radius: 20px;
-   
-    z-index: 1;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.dropdownelements  a {
-
-    color: red;
-    padding:  12px;
-    text-decoration: none; 
-    display: block;
-    
+.dropdownelements {
+  display: none;
+  position: absolute;
+  top: 62px;
+  left: 12px;
+  background-color: orange;
+  border-radius: 20px;
+  z-index: 1;
 }
 
-
-.dropdownelements a:hover{
-    background-color: white;
-    border-radius: 20px;
-    transition: all 0s ease-in;
+.dropdownelements a {
+  color: red;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
 }
 
+.dropdownelements a:hover {
+  background-color: white;
+  border-radius: 20px;
+  transition: all 0s ease-in;
+}
 
 .dropdown:hover .dropdownelements {
-display:block; 
-
+  display: block;
 }
-
-
-
-
 
 /* ------------------------------------------------------ */
 
 /* Discover our Tours Hover and button */
 
-
-.mainbtn{
+.mainbtn {
   text-align: center;
   position: relative;
-  }
-
-
-
-.btn{
-  position: relative; 
-   top: 10px;
-    padding: 15px;
-    display: inline-block;
-    text-decoration: none;
-    background-color: white;
-    text-transform: uppercase;
-    border-radius:45px; 
-    color: rgba(0, 0, 0, 0.308);
-    animation: move 3.5s ease-in-out ;    
 }
 
-.btn::after{
-  content: '';
+.btn {
+  position: relative;
+  top: 10px;
+  padding: 15px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 45px;
+  color: rgba(0, 0, 0, 0.308);
+  animation: move 3.5s ease-in-out;
+}
+
+.btn::after {
+  content: "";
   position: absolute;
-   top: 0px;
+  top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
   border-radius: 45px;
   z-index: -1;
   transition: ease-in-out 700ms;
- }
+}
 
-.btn:hover::after{
+.btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
- background-color: white;
+  background-color: white;
   opacity: 0;
   z-index: 1;
 }
 
-
-  
-
-
-h1>span:nth-child(1){
-    display: block;
-    color: white;
-    font-size: 40px;
-    font-family: sans-serif;
-    letter-spacing: 10px;
-    font-weight: 700;
-    margin-bottom: 3  5px;
-    animation: move1 4s;
+h1 > span:nth-child(1) {
+  display: block;
+  color: white;
+  font-size: 40px;
+  font-family: sans-serif;
+  letter-spacing: 10px;
+  font-weight: 700;
+  margin-bottom: 3 5px;
+  animation: move1 4s;
 }
 
-
-h1>span:nth-child(2){
-    display: block;
-    color: white;
-    font-size: 20px;
-    font-family: sans-serif;
-     animation: move2 3s;
+h1 > span:nth-child(2) {
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  animation: move2 3s;
 }
 
-
-@keyframes move{
+@keyframes move {
   from {
-   top:40px;
+    top: 40px;
     opacity: 0;
   }
-  to{
-    top:10px;
+  to {
+    top: 10px;
     opacity: 1;
   }
-} 
-
-
-@keyframes move1{
-from {
-transform: translateX(-80px)
-}
-top {transform:translateX(0px)
-
-}
 }
 
-@keyframes move2{
-from {
-    transform: translateX(80px)
+@keyframes move1 {
+  from {
+    transform: translateX(-80px);
+  }
+  top {
+    transform: translateX(0px);
+  }
 }
-top {transform:translateX(0px)
 
- }
+@keyframes move2 {
+  from {
+    transform: translateX(80px);
+  }
+  top {
+    transform: translateX(0px);
+  }
 }
-
-
-
-
-
 
 /* ------------------------------------------------------------ */
 
-
 /* THE LINK LOREM HOVER IN THE PARAGRAPH */
-  
 
-p{
-  position: relative;
-  top: 200px;
+p {
   width: 100%;
+  background-color: #89c38b;
   color: white;
 }
 
-p::first-line{
-font-size: 1.3em;
-text-transform: uppercase;
-font-family: sans-serif;
+p::first-line {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-family: sans-serif;
 }
 
-
-p::first-letter{
- 
+p::first-letter {
   font-size: 50px;
   color: red;
 }
 
-
-
-.article{
-    padding: 10px;
-    font-size: 20px;
-    position: relative;
-    top: 60px;
- }
- 
- .article a{
-    padding: 10px;
-    font-size: 20px;
-    text-decoration: none;
-   
- }
- 
- .article a::before {
-    content: 'More INFO ABOUT';
-    color: #3e8e41;
-    background-color: white;
-    position: absolute;
-    bottom: 100%;
-     padding: 5px 20px 5px 5px;
-    transform: scale(0);
-    transition: ease-in-out 750ms;
-    border-radius: 10px;
-    white-space: nowrap;
- } 
- 
- 
- 
-.article  a:hover{
-    color:green;
-    text-decoration: none;
-    cursor: alias;
-    
- }  
- 
-.article a:hover::before{
-    transform: scale(1);
-    color:green;
-    text-decoration: none;
-} 
-
-
-
-
-
-
- /*-------------------------------------- */
-
-
-
+.article {
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(63, 68, 65),
+    rgba(140, 144, 142, 0)
+  ),
+  url(the-man-and-the-sea.jpg);
+height: 95vh;
   
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  font-size: 20px;
+  position: relative;
+  margin: 0px;
+  height: 600px;
+}
 
+.article a {
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
 
+.article a::before {
+  content: "More INFO ABOUT";
+  color: #3e8e41;
+  background-color: rgba(255, 127, 80, 0.596);
+  position: absolute;
+  bottom: 100%;
+  padding: 5px 20px 5px 5px;
+  transform: scale(0);
+  transition: ease-in-out 750ms;
+  border-radius: 10px;
+  white-space: nowrap;
+}
 
+.article a:hover {
+  color: white;
+  text-decoration: none;
+  cursor: alias;
+}
 
+.article a:hover::before {
+  transform: scale(1);
+  color: green;
+  text-decoration: none;
+}
+
+/*-------------------------------------- */
