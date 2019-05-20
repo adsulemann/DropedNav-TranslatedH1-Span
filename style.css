@@ -1,8 +1,5 @@
 * {
   box-sizing: border-box;
-}
-
-body {
   padding: 0px;
   margin: 0px;
 }
@@ -17,64 +14,82 @@ body {
     ),
     url(hero.jpg);
   height: 95vh;
-  background-attachment:fixed;
+  background-attachment: fixed;
 }
 
-.logo{
-  float: right;
+.logo {
+  float: left;
   position: relative;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  left: 20px;
 }
-
 
 /* -------------------------------------------- */
 
-/* Droped Button (Nav) */
-
-.button {
+/* Droped Button(Nav) */
+.navigation-icon{
   position: relative;
-  top: 20px;
-  left: 10px;
-  background-color: white;
-  color: #3e8e41;
-  padding: 10px;
-  font-size: 18px;
-  border: none;
-  border-radius: 45px;
+  margin-top:35px;
+  left:  19px;
+
+
 }
-
-.dropdown {
-  position: relative;
+.navigation-icon::after,.navigation-icon::before,.navigation-icon{
   display: inline-block;
+  width:30px;
+  height:2px;
+  background-color: #333;
 }
-
-.dropdownelements {
-  display: none;
+.navigation-icon::before{
+  top:-8px;
+}
+.navigation-icon::after{
+  top:8px;
+}
+.navigation-icon::after,.navigation-icon::before{
+  content: '';
   position: absolute;
-  top: 62px;
-  left: 12px;
-  background-color: orange;
-  border-radius: 20px;
-  z-index: 1;
+}
+.navigation-button:hover .navigation-icon::before{
+  top:-10px;
+}
+.navigation-button:hover .navigation-icon::after{
+  top:10px;
+}
+.navigation-checkbox:checked ~ .navigation-background{
+transform:scale(80);
+}
+.navigation-checkbox{
+  display: none;
 }
 
-.dropdownelements a {
-  color: red;
-  padding: 12px;
-  text-decoration: none;
-  display: block;
+.navigation-background{
+  height:60px;
+  width:60px;
+  position:fixed;
+  background-image:radial-gradient(rgb(99, 199, 116),rgba(39, 117, 180, 0.315));
+  z-index:1;
+  top:65px;
+  right:65px;
+  border-radius:50%;
+  transition: transform 1.2s cubic-bezier(0.86,0,0.07,1);
+}
+.navigation-button{
+  position:fixed;
+  width:70px;
+  height:70px;
+  background-color:#fff;
+  border-radius:50%;
+  top:60px;
+  right:60px;
+  z-index:2;
+  cursor: pointer;
+
 }
 
-.dropdownelements a:hover {
-  background-color: white;
-  border-radius: 20px;
-  transition: all 0s ease-in;
-}
 
-.dropdown:hover .dropdownelements {
-  display: block;
-}
+
+
 
 /* ------------------------------------------------------ */
 
@@ -84,13 +99,8 @@ body {
   text-align: center;
   position: relative;
   top: 100px;
-  font-family: 'Sedgwick Ave Display', cursive;
+  font-family: "Sedgwick Ave Display", cursive;
 }
-
-
-  
-
-
 
 .btn {
   position: relative;
@@ -128,7 +138,7 @@ h1 > span:nth-child(1) {
   display: block;
   color: white;
   font-size: 40px;
-  font-family: 'Audiowide', cursive;
+  font-family: "Audiowide", cursive;
   letter-spacing: 10px;
   font-weight: 700;
   margin-bottom: 3px 5px;
@@ -139,7 +149,7 @@ h1 > span:nth-child(2) {
   display: block;
   color: white;
   font-size: 20px;
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   animation: move2 3s;
 }
 
@@ -177,7 +187,6 @@ h1 > span:nth-child(2) {
 /* THE LINK LOREM HOVER IN THE PARAGRAPH */
 
 p {
- 
   background-attachment: fixed;
   width: 100%;
   background-color: #89c38b;
@@ -188,7 +197,7 @@ p {
 p::first-line {
   font-size: 1.3em;
   text-transform: uppercase;
-  font-family: 'Walter Turncoat', cursive;
+  font-family: "Walter Turncoat", cursive;
 }
 
 p::first-letter {
@@ -198,13 +207,13 @@ p::first-letter {
 
 .article {
   background-image: linear-gradient(
-    to right bottom,
-    rgb(63, 68, 65),
-    rgba(140, 144, 142, 0)
-  ),
-  url(the-man-and-the-sea.jpg);
-height: 95vh;
-  
+      to right bottom,
+      rgb(63, 68, 65),
+      rgba(140, 144, 142, 0)
+    ),
+    url(the-man-and-the-sea.jpg);
+  height: 95vh;
+
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px;
@@ -212,7 +221,7 @@ height: 95vh;
   position: relative;
   margin: 0px;
   height: 600px;
-  font-family: 'Macondo Swash Caps', cursive;
+  font-family: "Macondo Swash Caps", cursive;
 }
 
 .article a {
